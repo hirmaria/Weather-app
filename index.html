@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌥Weathers</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="conteiner">
+      <!--searching tab starts here -->
+      <form id="searching-city">
+        <input
+          type="text"
+          id="search-text-input"
+          placeholder="Enter your city"
+        />
+        <button type="submit" class="btn btn-primary" id="searching-button">
+          Search
+        </button>
+        <button type="button" class="btn btn-success" id="current-coord">
+          Current
+        </button>
+      </form>
+
+      <!--searching tab ends here -->
+      <!--tab with city and its weather starts here -->
+      <div class="row row-col-3">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title" id="currentCity">Kyiv</h4>
+            <ul class="card-text">
+              <li id="currentDate"></li>
+              <li id="currentDay"></li>
+              <li id="currentTime"></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">
+                <span id="temperature-celsius">31</span>
+                <span class="temp">°C </span>
+              </h4>
+            </div>
+          </div>
+          <br />
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <ul class="card-text">
+                <li>Humidity: <span id="humidity">29</span> %</li>
+                <li>Wind: <span id="wind">3</span> km/h</li>
+              </ul>
+            </div>
+          </div>
+          <br />
+        </div>
+      </div>
+      <!--tab with city and its weather ends here -->
+      <!--tab with weeks weather starts here -->
+      <div class="row row-col-5">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Sun</h5>
+
+              <p class="card-text">
+                6/12
+                <br />
+                <span class="emoji">🌤</span>
+                <br />
+                <strong>28°C</strong>
+                <br />
+                18°C
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Mon</h5>
+
+              <p class="card-text">
+                6/13
+                <br />
+                <span class="emoji">☁</span>
+                <br />
+                <strong>26°C</strong>
+                <br />
+                15°C
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tue</h5>
+
+              <p class="card-text">
+                6/14
+                <br />
+                <span class="emoji">🌧</span>
+                <br />
+                <strong>23°C</strong>
+                <br />
+                14°C
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Wen</h5>
+
+              <p class="card-text">
+                6/15
+                <br />
+                <span class="emoji">☁</span>
+                <br />
+                <strong>24°C</strong>
+                <br />
+                15°C
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Thu</h5>
+
+              <p class="card-text">
+                6/16
+                <br />
+                <span class="emoji">🌤</span>
+                <br />
+                <strong>27°C</strong>
+                <br />
+                18°C
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>Created by <a href="">Maria Hirman</a></footer>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
